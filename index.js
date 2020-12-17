@@ -4,6 +4,7 @@ const setupDiv = document.getElementById("setup");
 const punchlineDiv = document.getElementById("punchline");
 const punchlineBtn = document.getElementById("punchlineBtn");
 const newJokeBtn = document.getElementById("newJokeBtn");
+var audio = new Audio('./audio/joke.mp3');
 let punchline;
 
 // Add an event listener for the punchline button. When clicked it should call a function called getPunchline
@@ -22,6 +23,11 @@ function getPunchline() {
     punchlineDiv.classList.add('bubble');
     punchlineBtn.classList.toggle('hidden');
     newJokeBtn.classList.toggle('hidden');
+    setTimeout(() => audio.play(), 500);
+}
+
+function getMusic(){
+    
 }
 
 // Setup an async function called getJoke
